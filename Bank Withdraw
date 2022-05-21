@@ -1,0 +1,89 @@
+Cédula_de_Cem = 100
+Cédula_de_Cinquenta = 50
+Cédula_de_Vinte = 20
+Cédula_de_Dez = 10
+Cédula_de_Cinco = 5
+Cédula_de_Dois = 2
+Moeda_de_Um = 1
+
+Q_100 = 0
+Q_50 = 0
+Q_20 = 0
+Q_10 = 0
+Q_5 = 0
+Q_2 = 0
+Q_1 = 0
+
+Stop_Segundo_While = 0
+
+Requisição_de_saque = int(input("Quanto você deseja sacar ? "))
+N_da_Operação = Requisição_de_saque
+
+if Requisição_de_saque == Cédula_de_Cem:
+    print("Entregue 1 nota de R$%d.00" % Cédula_de_Cem)
+elif Requisição_de_saque == Cédula_de_Cinquenta:
+    print("Entregue 1 nota de R$%d.00" % Cédula_de_Cinquenta)
+elif Requisição_de_saque == Cédula_de_Vinte:
+    print("Entregue 1 nota de R$%d.00" % Cédula_de_Vinte)
+elif Requisição_de_saque == Cédula_de_Dez:
+    print("Entregue 1 nota de R$%d.00" % Cédula_de_Dez)
+elif Requisição_de_saque == Cédula_de_Dois:
+    print("Entregue 1 nota de R$%d.00" % Cédula_de_Dois)
+elif Requisição_de_saque == Moeda_de_Um:
+    print("Entregue 1 moeda de R$%d.00" % Moeda_de_Um)
+
+while N_da_Operação >= 0:
+    if N_da_Operação >= Cédula_de_Cem:
+        Q_100 = Q_100 + 1
+        N_da_Operação = N_da_Operação - Cédula_de_Cem
+    elif N_da_Operação >= Cédula_de_Cinquenta:
+        Q_50 = Q_50 + 1
+        N_da_Operação = N_da_Operação - Cédula_de_Cinquenta
+    elif N_da_Operação >= Cédula_de_Vinte:
+        Q_20 = Q_20 + 1
+        N_da_Operação = N_da_Operação - Cédula_de_Vinte
+    elif N_da_Operação >= Cédula_de_Dez:
+        Q_10 = Q_10 + 1
+        N_da_Operação = N_da_Operação - Cédula_de_Dez
+    elif N_da_Operação >= Cédula_de_Cinco:
+        Q_5 = Q_5 + 1
+        N_da_Operação = N_da_Operação - Cédula_de_Cinco
+    elif N_da_Operação >= Cédula_de_Dois:
+        Q_2 = Q_2 + 1
+        N_da_Operação = N_da_Operação - Cédula_de_Dois
+    elif N_da_Operação >= Moeda_de_Um:
+        Q_1 = Q_1 + 1
+        N_da_Operação = N_da_Operação - Moeda_de_Um
+    elif N_da_Operação == 0:
+        break
+
+while 1 < 2:
+    if Q_100 > 0:
+        print("Entregue %d cédulas de R$%d.00" % (Q_100, Cédula_de_Cem))
+        Q_100 = 0
+    elif Q_50 > 0:
+        print("Entregue %d cédulas de R$%d.00" % (Q_50, Cédula_de_Cinquenta))
+        Q_50 = 0
+    elif Q_20 > 0:
+        print("Entregue %d cédulas de R$%d.00" % (Q_20, Cédula_de_Vinte))
+        Q_20 = 0
+    elif Q_10 > 0:
+        print("Entregue %d cédulas de R$%d.00" % (Q_10, Cédula_de_Dez))
+        Q_10 = 0
+    elif Q_5 > 0:
+        print("Entregue %d cédulas de R$%d.00" % (Q_5, Cédula_de_Cinco))
+        Q_5 = 0
+    elif Q_2 > 0:
+        print("Entregue %d cédulas de R$%d.00" % (Q_2, Cédula_de_Dois))
+        Q_2 = 0
+    elif Q_1 > 0:
+        print("Entregue %d cédulas de R$%d.00" % (Q_1, Moeda_de_Um))
+        Q_1 = 0
+    else:
+        print("Fim")
+        break
+
+"A quantidade de notas entregues de cada tipo terá que ser armazenada em uma variável"
+"Se o valor for maior do que 100, some + 1 na variavel da Q_100 e diminua 100 do valor"
+"Cheque novamente se é maior do que 100 e repita"
+"Vai repetindo para todas as cédulas"
